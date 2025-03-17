@@ -1,0 +1,223 @@
+﻿PaperID,Date,Title,Author,Affiliation,Keyword,Citation,Abstract
+1,19-Feb-25,From Local to Global: A GraphRAG Approach to Query-Focused Summarization,Darren Edge | Ha Trinh | Newman Cheng | Joshua Bradley | Alex Chao,Microsoft Research | Microsoft Strategic Missions and Technologies | Microsoft Office of the CTO,GraphRAG | LLM | QFS | RAG,165,"The use of retrieval-augmented generation (RAG) to retrieve relevant information from an external knowledge source enables large language models (LLMs)
+to answer questions over private and/or previously unseen document collections.
+However, RAG fails on global questions directed at an entire text corpus, such
+as “What are the main themes in the dataset?”, since this is inherently a queryfocused summarization (QFS) task, rather than an explicit retrieval task. Prior
+QFS methods, meanwhile, do not scale to the quantities of text indexed by typical RAG systems. To combine the strengths of these contrasting methods, we
+propose GraphRAG, a graph-based approach to question answering over private
+text corpora that scales with both the generality of user questions and the quantity
+of source text. Our approach uses an LLM to build a graph index in two stages:
+first, to derive an entity knowledge graph from the source documents, then to pregenerate community summaries for all groups of closely related entities. Given a
+question, each community summary is used to generate a partial response, before
+all partial responses are again summarized in a final response to the user. For a
+class of global sensemaking questions over datasets in the 1 million token range,
+we show that GraphRAG leads to substantial improvements over a conventional
+RAG baseline for both the comprehensiveness and diversity of generated answers."
+2,27-Mar-24,Retrieval-Augmented Generation for Large Language Models: A Survey,Yunfan Gao | Yun Xiong | Xinyu Gao | Kangxiang Jia | Jinliu Pan | Yuxi Bi,Tongji University | Fudan University,RAG | LLM | Survey ,962,"Large Language Models (LLMs) showcase impressive capabilities but encounter challenges like hallucination,
+outdated knowledge, and non-transparent, untraceable reasoning
+processes. Retrieval-Augmented Generation (RAG) has emerged
+as a promising solution by incorporating knowledge from external
+databases. This enhances the accuracy and credibility of the
+generation, particularly for knowledge-intensive tasks, and allows
+for continuous knowledge updates and integration of domainspecific information. RAG synergistically merges LLMs’ intrinsic knowledge with the vast, dynamic repositories of external
+databases. This comprehensive review paper offers a detailed
+examination of the progression of RAG paradigms, encompassing
+the Naive RAG, the Advanced RAG, and the Modular RAG.
+It meticulously scrutinizes the tripartite foundation of RAG
+frameworks, which includes the retrieval, the generation and the
+augmentation techniques. The paper highlights the state-of-theart technologies embedded in each of these critical components,
+providing a profound understanding of the advancements in RAG
+systems. Furthermore, this paper introduces up-to-date evaluation framework and benchmark. At the end, this article delineates
+the challenges currently faced and points out prospective avenues
+for research and development ."
+3,21-Oct-24,GRAG: Graph Retrieval-Augmented Generation,Yuntong Hu | Zhihan Lei | Zheng Zhang | Bo Pan | Chen Ling | Liang Zhao,Emory University,GraphRAG | LLM ,165,"Naive Retrieval-Augmented Generation (RAG)
+focuses on individual documents during retrieval and, as a result, falls short in handling networked documents which are very
+popular in many applications such as citation graphs, social media, and knowledge
+graphs. To overcome this limitation, we introduce Graph Retrieval-Augmented Generation (GRAG), which tackles the fundamental
+challenges in retrieving textual subgraphs and
+integrating the joint textual and topological information into Large Language Models (LLMs)
+to enhance its generation. To enable efficient
+textual subgraph retrieval, we propose a novel
+divide-and-conquer strategy that retrieves the
+optimal subgraph structure in linear time. To
+achieve graph context-aware generation, incorporate textual graphs into LLMs through two
+complementary views—the text view and the
+graph view—enabling LLMs to more effectively comprehend and utilize the graph context. Extensive experiments on graph reasoning
+benchmarks demonstrate that in scenarios requiring multi-hop reasoning on textual graphs,
+our GRAG approach significantly outperforms
+current state-of-the-art RAG methods."
+4,27-May-24,G-Retriever: Retrieval-Augmented Generation for Textual Graph Understanding and Question Answering,Xiaoxin He | Yijun Tian | Yifei Sun | Nitesh V. Chawla | Thomas Laurent ,National University of Singapore | University of Notre Dame | Loyola Marymount University | New York University,,42,"Given a graph with textual attributes, we enable users to ‘chat with their graph’:
+that is, to ask questions about the graph using a conversational interface. In response to a user’s questions, our method provides textual replies and highlights the
+relevant parts of the graph. While existing works integrate large language models
+(LLMs) and graph neural networks (GNNs) in various ways, they mostly focus
+on either conventional graph tasks (such as node, edge, and graph classification),
+or on answering simple graph queries on small or synthetic graphs. In contrast,
+we develop a flexible question-answering framework targeting real-world textual
+graphs, applicable to multiple applications including scene graph understanding,
+common sense reasoning, and knowledge graph reasoning. Toward this goal, we
+first develop a Graph Question Answering (GraphQA) benchmark with data collected from different tasks. Then, we propose our G-Retriever method, introducing
+the first retrieval-augmented generation (RAG) approach for general textual graphs,
+which can be fine-tuned to enhance graph understanding via soft prompting. To
+resist hallucination and to allow for textual graphs that greatly exceed the LLM’s
+context window size, G-Retriever performs RAG over a graph by formulating this
+task as a Prize-Collecting Steiner Tree optimization problem. Empirical evaluations
+show that our method outperforms baselines on textual graph tasks from multiple
+domains, scales well with larger graph sizes, and mitigates hallucination. "
+5,3-Dec-24,From Isolated Conversations to Hierarchical Schemas: Dynamic Tree Memory Representation for LLMs,Alireza Rezazadeh |  Zichao Li  | Wei Wei | Yujia Bao,"Center for Advanced AI, Accenture",MemTree | LLM ,9,"Recent advancements in large language models have significantly improved their
+context windows, yet challenges in effective long-term memory management
+remain. We introduce MemTree, an algorithm that leverages a dynamic, treestructured memory representation to optimize the organization, retrieval, and integration of information, akin to human cognitive schemas. MemTree organizes
+memory hierarchically, with each node encapsulating aggregated textual content,
+corresponding semantic embeddings, and varying abstraction levels across the
+tree’s depths. Our algorithm dynamically adapts this memory structure by computing and comparing semantic embeddings of new and existing information to
+enrich the model’s context-awareness. This approach allows MemTree to handle
+complex reasoning and extended interactions more effectively than traditional
+memory augmentation methods, which often rely on flat lookup tables. Evaluations on benchmarks for multi-turn dialogue understanding and document question
+answering show that MemTree significantly enhances performance in scenarios
+that demand structured memory management."
+6,7-Dec-24,KG-Retriever: Efficient Knowledge Indexing for Retrieval-Augmented Large Language Models,Weijie Chen | Ting Bai | Jinbo Su,Beijing University of Posts and Telecommunications | University of Science and Technology Beijing | Xiaomi Corporation,Knowledge-Graph|RAG|LLM | QA,3,"Large language models with retrievalaugmented generation encounter a pivotal
+challenge in intricate retrieval tasks, e.g., multihop question answering, which requires the
+model to navigate across multiple documents
+and generate comprehensive responses based
+on fragmented information. To tackle this
+challenge, we introduce a novel Knowledge
+Graph-based RAG framework with a hierarchical knowledge retriever, termed KG-Retriever.
+The retrieval indexing in KG-Retriever is
+constructed on a hierarchical index graph that
+consists of a knowledge graph layer and a
+collaborative document layer. The associative
+nature of graph structures is fully utilized to
+strengthen intra-document and inter-document
+connectivity, thereby fundamentally alleviating
+the information fragmentation problem and
+meanwhile improving the retrieval efficiency
+in cross-document retrieval of LLMs. With
+the coarse-grained collaborative information
+from neighboring documents and concise
+information from the knowledge graph,
+KG-Retriever achieves marked improvements
+on five public QA datasets, showing the
+effectiveness and efficiency of our proposed
+RAG framework."
+7,23-Oct-23,Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy,Zhihong Shao | Yeyun Gong | yelong shen |Minlie Huang,Tsinghua University | Microsoft Research Asia | Microsoft Azure AI,RAG | LLM | Iterative Retrieval-Generation,157,"Retrieval-augmented generation has raise extensive attention as it is promising to address the
+limitations of large language models including
+outdated knowledge and hallucinations. However, retrievers struggle to capture relevance,
+especially for queries with complex information needs. Recent work has proposed to improve relevance modeling by having large language models actively involved in retrieval, i.e.,
+to guide retrieval with generation. In this paper, we show that strong performance can be
+achieved by a method we call ITER-RETGEN,
+which synergizes retrieval and generation in an
+iterative manner: a model’s response to a task
+input shows what might be needed to finish
+the task, and thus can serve as an informative
+context for retrieving more relevant knowledge
+which in turn helps generate a better response
+in another iteration. Compared with recent
+work which interleaves retrieval with generation when completing a single output, ITERRETGEN processes all retrieved knowledge as
+a whole and largely preserves the flexibility in
+generation without structural constraints. We
+evaluate ITER-RETGEN on multi-hop question
+answering, fact verification, and commonsense
+reasoning, and show that it can flexibly leverage parametric knowledge and non-parametric
+knowledge, and is superior to or competitive
+with state-of-the-art retrieval-augmented baselines while causing fewer overheads of retrieval
+and generation. We can further improve performance via generation-augmented retrieval
+adaptation."
+8,31-Jan-24,RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval,Parth Sarthi | Salman Abdullah | Aditi Tuli | Shubh Khanna | Anna Goldie | Christopher D. Manning,Stanford University,,78,"Retrieval-augmented language models can better adapt to changes in world state
+and incorporate long-tail knowledge. However, most existing methods retrieve
+only short contiguous chunks from a retrieval corpus, limiting holistic understanding of the overall document context. We introduce the novel approach of
+recursively embedding, clustering, and summarizing chunks of text, constructing
+a tree with differing levels of summarization from the bottom up. At inference
+time, our RAPTOR model retrieves from this tree, integrating information across
+lengthy documents at different levels of abstraction. Controlled experiments show
+that retrieval with recursive summaries offers significant improvements over traditional retrieval-augmented LMs on several tasks. On question-answering tasks
+that involve complex, multi-step reasoning, we show state-of-the-art results; for
+example, by coupling RAPTOR retrieval with the use of GPT-4, we can improve
+the best performance on the QuALITY benchmark by 20% in absolute accuracy."
+9,15-Feb-24,Grounding Language Model with Chunking-Free In-Context Retrieval,Hongjin Qian | Zheng Liu | Kelong Mao | Yujia Zhou | Zhicheng Dou,Renmin University of China|Beijing Academy of Artificial Intelligence,Grounding Language Model | In-Context Retrieval | LLM ,9,"This paper presents a novel Chunking-Free InContext (CFIC) retrieval approach, specifically
+tailored for Retrieval-Augmented Generation
+(RAG) systems. Traditional RAG systems often struggle with grounding responses using
+precise evidence text due to the challenges of
+processing lengthy documents and filtering out
+irrelevant content. Commonly employed solutions, such as document chunking and adapting language models to handle longer contexts,
+have their limitations. These methods either
+disrupt the semantic coherence of the text or
+fail to effectively address the issues of noise
+and inaccuracy in evidence retrieval.
+CFIC addresses these challenges by circumventing the conventional chunking process. It
+utilizes the encoded hidden states of documents for in-context retrieval, employing autoaggressive decoding to accurately identify the
+specific evidence text required for user queries,
+eliminating the need for chunking. CFIC is
+further enhanced by incorporating two decoding strategies, namely Constrained Sentence
+Prefix Decoding and Skip Decoding. These
+strategies not only improve the efficiency of
+the retrieval process but also ensure that the fidelity of the generated grounding text evidence
+is maintained. Our evaluations of CFIC on a
+range of open QA datasets demonstrate its superiority in retrieving relevant and accurate evidence, offering a significant improvement over
+traditional methods. By doing away with the
+need for document chunking, CFIC presents
+a more streamlined, effective, and efficient retrieval solution, making it a valuable advancement in the field of RAG systems."
+10,18-Oct-24,Graph Neural Network Enhanced Retrieval for Question Answering of LLMs,Zijian Li | Qingyan Guo | Jiawei Shao | Lei Song | Jiang Bian | Jun Zhang,Hong Kong University of Science and Technology | Microsoft Research | Tsinghua University,,8,"Retrieval augmented generation has revolutionized large language model (LLM) outputs by
+providing factual supports. Nevertheless, it
+struggles to capture all the necessary knowledge for complex reasoning questions. Existing retrieval methods typically divide reference
+documents into passages, treating them in isolation. These passages, however, are often interrelated, such as passages that are contiguous
+or share the same keywords. Therefore, it is
+crucial to recognize such relatedness for enhancing the retrieval process. In this paper,
+we propose a novel retrieval method, called
+GNN-Ret, which leverages graph neural networks (GNNs) to enhance retrieval by exploiting the relatedness between passages. Specifically, we first construct a graph of passages by
+connecting passages that are structure-related
+or keyword-related. A graph neural network
+(GNN) is then leveraged to exploit the relationships between passages and improve the
+retrieval of supporting passages. Furthermore,
+we extend our method to handle multi-hop
+reasoning questions using a recurrent graph
+neural network (RGNN), named RGNN-Ret.
+At each step, RGNN-Ret integrates the graphs
+of passages from previous steps, thereby enhancing the retrieval of supporting passages.
+Extensive experiments on benchmark datasets
+demonstrate that GNN-Ret achieves higher accuracy for question answering with a single
+query of LLMs than strong baselines that require multiple queries, and RGNN-Ret further
+improves accuracy and achieves state-of-theart performance, with up to 10.4% accuracy
+improvement on the 2WikiMQA dataset."
+11,3-Jun-22,Network self attention for forecasting time series,Yuntong Hu | Fuyuan Xiao,"Southwest University | National Engineering Laboratory for Integrated Aero-Space-Ground-Ocean Big Data Application Technology, China",Network | self attention | NLP,210,"Recently, attention mechanism has become a hot research topic. Its ability to assign global dependencies from input to output makes it widely used. Meanwhile, although there are some forecasting
+methods for time series, how to mine more information of time series and make more accurate
+predictions of it is still an open question. To address this issue, we propose network self attention
+to mine more information of time series. And we propose a novel forecasting model for time series,
+in which the similarity scores are learned by a recurrent neural network (RNN) based on network self
+attention. The similarity scores of nodes in network that is converted from time series by visibility
+algorithm are learned by RNN at the first step. Afterwards, the final network attention value is
+calculated. Finally, the prediction of time series is made with the final network attention value. To
+test the ability of our method to forecast time series, we make predictions of construction cost index
+(CCI), M1 and M3 datasets. Experiment results indicate that our method can make better predictions for
+some time series compared to other methods. Meanwhile, robustness test indicates that our method
+is of good robustness."
+12,7-Mar-24,HARNESSING EXPLANATIONS: LLM-TO-LM INTERPRETER FOR ENHANCED TEXT-ATTRIBUTED GRAPH REPRESENTATION LEARNING,Xiaoxin He | Xavier Bresson | Thomas Laurent | Adam Perold | Yann LeCun,National University of Singapore | Loyola Marymount University | New York University | Meta AI ,GNN | TAGs | LLM ,189,"Representation learning on text-attributed graphs (TAGs) has become a critical research problem in recent years. A typical example of a TAG is a paper citation
+graph, where the text of each paper serves as node attributes. Initial graph neural network (GNN) pipelines handled these text attributes by transforming them
+into shallow or hand-crafted features, such as skip-gram or bag-of-words features.
+Recent efforts have focused on enhancing these pipelines with language models
+(LMs), which typically demand intricate designs and substantial computational resources. With the advent of powerful large language models (LLMs) such as GPT
+or Llama2, which demonstrate an ability to reason and to utilize general knowledge, there is a growing need for techniques which combine the textual modelling
+abilities of LLMs with the structural learning capabilities of GNNs. Hence, in this
+work, we focus on leveraging LLMs to capture textual information as features,
+which can be used to boost GNN performance on downstream tasks. A key innovation is our use of explanations as features: we prompt an LLM to perform
+zero-shot classification, request textual explanations for its decision-making process, and design an LLM-to-LM interpreter to translate these explanations into
+informative features for downstream GNNs. Our experiments demonstrate that
+our method achieves state-of-the-art results on well-established TAG datasets, including Cora, PubMed, ogbn-arxiv, as well as our newly introduced dataset,
+tape-arxiv23. Furthermore, our method significantly speeds up training,
+achieving a 2.88 times improvement over the closest baseline on ogbn-arxiv.
+Lastly, we believe the versatility of the proposed method extends beyond TAGs
+and holds the potential to enhance other tasks involving graph-text data"
+13,17-Oct-23,"Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection",Akari Asai | Zeqiu Wu |Yizhong Wang | Avirup Sil | Hannaneh Hajishirzi,University of Washington | Allen Institute for AI | IBM Research AI,SELF-RAG | LLM | RAG ,445,"Despite their remarkable capabilities, large language models (LLMs) often produce
+responses containing factual inaccuracies due to their sole reliance on the parametric knowledge they encapsulate. Retrieval-Augmented Generation (RAG), an ad
+hoc approach that augments LMs with retrieval of relevant knowledge, decreases
+such issues. However, indiscriminately retrieving and incorporating a fixed number
+of retrieved passages, regardless of whether retrieval is necessary, or passages are
+relevant, diminishes LM versatility or can lead to unhelpful response generation.
+We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (SELF-RAG) that enhances an LM’s quality and factuality through retrieval
+and self-reflection. Our framework trains a single arbitrary LM that adaptively
+retrieves passages on-demand, and generates and reflects on retrieved passages
+and its own generations using special tokens, called reflection tokens. Generating
+reflection tokens makes the LM controllable during the inference phase, enabling it
+to tailor its behavior to diverse task requirements. Experiments show that SELFRAG (7B and 13B parameters) significantly outperforms state-of-the-art LLMs
+and retrieval-augmented models on a diverse set of tasks. Specifically, SELF-RAG
+outperforms ChatGPT and retrieval-augmented Llama2-chat on Open-domain QA,
+reasoning and fact verification tasks, and it shows significant gains in improving
+factuality and citation accuracy for long-form generations relative to these models"
